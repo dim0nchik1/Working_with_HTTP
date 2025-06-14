@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.statusBtn {
+    border-radius: 80%;
+
+}
+#ticketsList {
+    list-style: none;
+    padding: 0;
+}
+.ticket {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.ticket .actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.ticket .actions button {
+    margin-left: 5px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 4px;
+}
+.loading {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.date {
+    position: absolute;
+    right: 250px;
+    top: 20px;
+
+}
+
+
+.title {
+    position: absolute;
+    left: 70px;
+    top: 20px;
+}

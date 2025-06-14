@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HelpDesk</title>
+
+</head>
+<body>
+<header>
+    <h1>HelpDesk</h1>
+    <button id="addTicketBtn">Добавить тикет</button>
+</header>
+
+<main>
+    <div id="loading" class="loading" style="display:none;">Загрузка...</div>
+    <ul id="ticketsList"></ul>
+</main>
+
+<!-- Модальное окно добавления/редактирования -->
+<div id="ticketModal" class="modal">
+    <div class="modal-content">
+        <h2 id="modalTitle">Новый тикет</h2>
+        <form id="ticketForm">
+            <input type="hidden" id="ticketId" />
+            <div>
+                <label>Название:</label>
+                <input type="text" id="ticketName" required />
+            </div>
+            <div>
+                <label>Описание:</label>
+                <textarea id="ticketDescription" required></textarea>
+            </div>
+            <div>
+                <label>Статус сделано:</label>
+                <input type="checkbox" id="ticketStatus" />
+            </div>
+            <div class="modal-buttons">
+                <button type="submit">Сохранить</button>
+                <button type="button" id="cancelBtn">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно подтверждения удаления -->
+<div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <p>Вы уверены, что хотите удалить этот тикет?</p>
+        <button id="confirmDeleteBtn">Удалить</button>
+        <button id="cancelDeleteBtn">Отмена</button>
+    </div>
+</div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
